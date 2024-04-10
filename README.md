@@ -21,6 +21,17 @@ Example use cases:
 - Create Azure AI service - Computer Vision and get the API key.
 In `SeemAPI.py`, replace {YOUR_API_KEY_GOES_HERE} following 'Ocp-Apim-Subscription-Key' with your Azure Computer Vision API key, replace {YOUR_ENDPOINT_GOES_HERE} with your Endpoint (use the format 'xxx.cognitiveservices.azure.com').
 
+### Issues and Solutions
+- If met error
+  ```
+  Assets\Scripts\MR_Copilot\Sketchfab\SketchfabLoader.cs(8,7): error CS0246: The type or namespace name 'Siccity' could not be found (are you missing a using directive or an assembly reference?)
+  ```
+  Reinstall GLTFUtility package from [here](https://github.com/siccity/gltfutility.git)
+- If met error
+  ```
+  Assets\Editor\MR_Copilot\RunExperimentsUpdated.cs(410,30): error CS1061: 'ChatCompilationManagerModular' does not contain a definition for 'ClearRecordedErrorMessages' and no accessible extension method 'ClearRecordedErrorMessages' accepting a first argument of type 'ChatCompilationManagerModular' could be found (are you missing a using directive or an assembly reference?)
+  ```
+  In `ChatCompilationManagerModular.cs`, change the visibility of function `ClearRecordedErrorMessages` from private to public.
 
 ### Setting up a Unity Project
 The project has been tested on Unity versions 2021.3.25f1 and 2022.3.11f1 and has several dependencies. The largest of these is the Roslyn C# compiler. For this project we used the implementation by Trivial Interactive, which you have to purchase on the Unity Asset store [C# Compiler](https://assetstore.unity.com/packages/tools/integration/roslyn-c-runtime-compiler-142753). This project could be adapted to depend on the open-source implementation of C#, but would require further implementation of attaching compiled code to GameObjects that this implementation comes with. Thus, to get this project to function, you need to add the compiler to it. 
