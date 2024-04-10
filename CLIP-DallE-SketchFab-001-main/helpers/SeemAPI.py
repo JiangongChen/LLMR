@@ -10,7 +10,7 @@ def get_sketchfab_model_descriptions(path_folder):
     headers = {
         # Request headers
         'Content-Type': 'application/octet-stream',
-        'Ocp-Apim-Subscription-Key': 'YOUR_API_KEY_GOES_HERE', #e.g 'c573...'
+        'Ocp-Apim-Subscription-Key': '{YOUR_API_KEY_GOES_HERE}', #e.g 'c573...'
     }
 
     params = urllib.parse.urlencode({
@@ -35,7 +35,7 @@ def get_sketchfab_model_descriptions(path_folder):
         with io.open(os.path.join(path_folder,filename), 'rb') as image:
             body = image.read()
         try:
-            conn = http.client.HTTPSConnection('eastusa.cognitiveservices.azure.com')
+            conn = http.client.HTTPSConnection('{YOUR_ENDPOINT_GOES_HERE}')
             conn.request("POST", "/computervision/imageanalysis:analyze?api-version=2023-02-01-preview&%s" % params, body, headers)
             response = conn.getresponse()
             

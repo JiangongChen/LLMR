@@ -7,9 +7,9 @@ def query_and_download_sketchfab_models(query):
   # Define the base URL for the Sketchfab API
   base_url = 'https://api.sketchfab.com/v3'
 
-  # Define the authorization header with the user OAuth access token
-  # Replace {INSERT_USER_OAUTH_ACCESS_TOKEN} with the actual token
-  auth_header = {'authorization': 'Bearer 09eeace89d7643dba63fd19da7265477'}
+  # Define the authorization header with the user API token
+  # Replace {INSERT_API_TOKEN_HERE} with your API token
+  auth_header = {'authorization': 'Token {INSERT_API_TOKEN_HERE}'}
 
   # Define the parameters for the search request
   # Limit the results to 10 and sort by popularity

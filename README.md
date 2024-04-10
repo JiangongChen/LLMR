@@ -15,6 +15,13 @@ Example use cases:
 
 ## Installation
 
+### API Configuration
+- Set the environment variable OPENAI_API_KEY to your OpenAI API key. 
+- In `DownloadSketchFabModels.py`, replace {INSERT_API_TOKEN_HERE} with your Sketchfab API key.
+- Create Azure AI service - Computer Vision and get the API key.
+In `SeemAPI.py`, replace {YOUR_API_KEY_GOES_HERE} following 'Ocp-Apim-Subscription-Key' with your Azure Computer Vision API key, replace {YOUR_ENDPOINT_GOES_HERE} with your Endpoint (use the format 'xxx.cognitiveservices.azure.com').
+
+
 ### Setting up a Unity Project
 The project has been tested on Unity versions 2021.3.25f1 and 2022.3.11f1 and has several dependencies. The largest of these is the Roslyn C# compiler. For this project we used the implementation by Trivial Interactive, which you have to purchase on the Unity Asset store [C# Compiler](https://assetstore.unity.com/packages/tools/integration/roslyn-c-runtime-compiler-142753). This project could be adapted to depend on the open-source implementation of C#, but would require further implementation of attaching compiled code to GameObjects that this implementation comes with. Thus, to get this project to function, you need to add the compiler to it. 
 
