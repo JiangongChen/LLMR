@@ -17,6 +17,7 @@ Example use cases:
 
 ### API Configuration
 - Set the environment variable OPENAI_API_KEY to your OpenAI API key. 
+- Open Assets/Resources/OpenAIConfigurationSettings.asset in Unity inspector, uncheck "Use Azure Open AI", fill "Api Key" with your OpenAI API key, ignore other settings if using personal API key.
 - In `DownloadSketchFabModels.py`, replace {INSERT_API_TOKEN_HERE} with your Sketchfab API key.
 - Create Azure AI service - Computer Vision and get the API key.
 In `SeemAPI.py`, replace {YOUR_API_KEY_GOES_HERE} following 'Ocp-Apim-Subscription-Key' with your Azure Computer Vision API key, replace {YOUR_ENDPOINT_GOES_HERE} with your Endpoint (use the format 'xxx.cognitiveservices.azure.com').
